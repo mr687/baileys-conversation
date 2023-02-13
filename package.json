@@ -1,11 +1,17 @@
 {
-  "name": "tsc-pkg-template",
-  "version": "0.0.0",
-  "author": "",
-  "repository": "",
+  "name": "baileys-conversation",
+  "version": "0.0.1",
+  "author": "mr687 <dapino.dev@gmail.com>",
+  "description": "Allow baileys to save conversation (text only)",
+  "keywords": [
+    "baileys",
+    "whatsapp"
+  ],
+  "repository": "git@github.com:mr687/baileys-conversation.git",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "devDependencies": {
+    "@adiwajshing/baileys": "^5.0.0",
     "@types/node": "^18.11.18",
     "@typescript-eslint/eslint-plugin": "^5.48.2",
     "@typescript-eslint/parser": "^5.48.2",
@@ -16,6 +22,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "husky": "^8.0.3",
     "lint-staged": "^13.1.0",
+    "mongoose": "^6.9.1",
     "pino-pretty": "^9.1.1",
     "prettier": "^2.8.3",
     "ts-loader": "^9.4.2",
@@ -40,6 +47,6 @@
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
     "lint:fix": "yarn lint --fix",
     "format": "prettier --write \"src/**/*.ts\"",
-    "postinstall": "husky install"
+    "prepare": "husky install && yarn build"
   }
 }
