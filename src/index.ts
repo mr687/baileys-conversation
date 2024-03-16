@@ -1,5 +1,6 @@
 import { BaileysEventMap, WASocket, jidNormalizedUser, proto } from '@adiwajshing/baileys'
 import { Connection, Schema } from 'mongoose'
+import './lib.ts'
 
 export enum ConversationType {
   TEXT = 'text',
